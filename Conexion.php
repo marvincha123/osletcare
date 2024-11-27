@@ -7,9 +7,9 @@
 
 
 		public function __construct(){
-			$this->cadenaConexion='mysql:host=localhost;dbname=centraldent2';
-			$this->user='root';
-			$this->password='';
+			$this->cadenaConexion='mysql:host=mysql-188005-0.cloudclusters.net;dbname=centraldent2';
+			$this->user='admin';
+			$this->password='cIvuKN1u';
 		}
 
 		public function conectar(){
