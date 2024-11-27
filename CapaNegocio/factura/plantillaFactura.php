@@ -5,7 +5,7 @@ require('../../fpdf/fpdf.php');
         function Header(){
             setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
       
-            $this->Image('../../Public/Imagen/logo_drlet.jpg',5,5,80);
+            $this->Image('../../Public/Imagen/osletcare.jpg',5,5,30);
             $this->SetFont('Arial','B',22);
             $this->Cell(80);
             $this->Cell(130,35,'FACTURA',0,1,'C');

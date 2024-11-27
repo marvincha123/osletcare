@@ -35,7 +35,7 @@ include('Kairos.php');
 		
 		$this->objetoConexion->conectar();
 		$this->objetoConexion->ejecutar(
-			"insert into usuario ( nombre, apellido,cedula, correo,password,nit,sexo,telefono,foto,tipo) values ('$nombre', '$apellido','$cedula', ' $correo', '$password_encriptado', '$nit','$sexo','$telefono','$destinofoto','C')");
+			"insert into usuario ( nombre,apellido,cedula,correo,password,nit,sexo,telefono,foto,tipo) values ('$nombre', '$apellido','$cedula', '$correo', '$password_encriptado', '$nit','$sexo','$telefono','$destinofoto','C')");
 
 		$this->objetoConexion->desconectar();	
 		}

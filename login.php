@@ -157,8 +157,96 @@ include_once("plantilla.html");
     </style> -->
 </head>
 <body>
+<!-- Modal 2: Manual de Usuario -->
+<div class="modal fade" id="manualModal" tabindex="-1" aria-labelledby="manualModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="manualModalLabel">Manual de Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Introducción al Software de Diagnóstico</strong></h6>
+        <p>
+          Este manual te guiará a través del uso de nuestro sistema experto para diagnósticos médicos. Sigue las 
+          instrucciones para aprovechar al máximo sus funciones.
+        </p>
+        <h6><strong>1. Inicio de Sesión</strong></h6>
+        <p>Ingresa tus credenciales para acceder al sistema. Si no tienes una cuenta, puedes registrarte fácilmente.</p>
+        <h6><strong>2. Ingreso de Información</strong></h6>
+        <p>
+          Completa el formulario con tus síntomas y antecedentes médicos. Asegúrate de que la información sea precisa 
+          para obtener resultados fiables.
+        </p>
+        <h6><strong>3. Interpretación de Resultados</strong></h6>
+        <p>
+          El sistema proporcionará un diagnóstico basado en tus datos. Recuerda que este es un soporte y no reemplaza 
+          una consulta médica.
+        </p>
+        <h6><strong>Soporte Técnico</strong></h6>
+        <p>
+          Si necesitas ayuda, contáctanos en soporte@diagnosticointeligente.com.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyModalLabel">Políticas de Privacidad y Términos y Condiciones</h5>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Bienvenido a Diagnóstico Inteligente</strong></h6>
+        <p>
+          Antes de continuar utilizando nuestro software, por favor revisa nuestras **Políticas de Privacidad** 
+          y **Términos y Condiciones**. Asegúrate de comprender cómo manejamos tu información y las condiciones 
+          bajo las cuales puedes usar nuestros servicios.
+        </p>
+        <hr>
 
-
+        <h5><strong>Políticas de Privacidad</strong></h5>
+        <p>
+          Nuestro software recopila y utiliza información personal y médica para ofrecer diagnósticos precisos. 
+          A continuación, detallamos nuestras prácticas:
+        </p>
+        <ul>
+          <li>Datos personales como nombre, edad y género.</li>
+          <li>Información médica relacionada con síntomas y antecedentes clínicos.</li>
+          <li>Datos técnicos como dirección IP y tipo de dispositivo.</li>
+        </ul>
+        <h5><strong>Términos y Condiciones</strong></h5>
+        <p>
+          Al usar nuestro software, aceptas cumplir con los siguientes términos y condiciones:
+        </p>
+        <ul>
+          <li>El software está diseñado únicamente para uso personal y no debe emplearse con fines comerciales o ilegales.</li>
+          <li>Aunque nos esforzamos por ofrecer diagnósticos precisos, el software no sustituye la consulta con profesionales médicos.</li>
+          <li>Nos reservamos el derecho de actualizar las políticas y términos en cualquier momento.</li>
+        </ul>
+        <hr>
+        <h6><strong>Confirmación</strong></h6>
+        <form id="privacyForm">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkPrivacy">
+            <label class="form-check-label" for="checkPrivacy">Acepto las Políticas de Privacidad.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkTerms">
+            <label class="form-check-label" for="checkTerms">Acepto los Términos y Condiciones.</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="acceptPrivacyButton" disabled>Aceptar y Continuar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container mt-5 pt-5">
   <div class="mx-auto" style="width:400px;">
   <div class="card" style="width: 27rem;">
@@ -280,8 +368,32 @@ include_once("plantilla.html");
         }
     </script> -->
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var privacyModal = new bootstrap.Modal(document.getElementById("privacyModal"));
+        var manualModal = new bootstrap.Modal(document.getElementById("manualModal"));
+        var acceptPrivacyButton = document.getElementById("acceptPrivacyButton");
+        var form = document.getElementById("privacyForm");
 
+        // Mostrar el primer modal automáticamente al cargar la página
+        privacyModal.show();
+
+        // Habilitar el botón "Aceptar y Continuar" solo si todas las casillas están marcadas
+        form.addEventListener("change", function () {
+          var allChecked = document.querySelectorAll("#privacyForm .form-check-input:checked").length ===
+            document.querySelectorAll("#privacyForm .form-check-input").length;
+          acceptPrivacyButton.disabled = !allChecked;
+        });
+
+        // Mostrar el segundo modal después de aceptar el primero
+        acceptPrivacyButton.addEventListener("click", function () {
+          privacyModal.hide();
+          manualModal.show();
+        });
+      });
+    </script>
 <script>
+  
   function take_snapshot(){
     Webcam.snap(function(data_uri) {
       document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';

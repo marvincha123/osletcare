@@ -22,30 +22,30 @@ include_once("plantilla.html");
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="Public/Imagen/bienvenido1.jpg" alt="First slide">
+            <img class="d-block w-100" src="Public/Imagen/osletcare1.jpg" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
-              <h5>Protesis</h5>
-              <p>Protesis fija y removible</p>
+              <h5>Dermatitis</h5>
+              <p>Dermatitis aguda</p>
               </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="Public/Imagen/bienvenido2.jpg" alt="Second slide">
+            <img class="d-block w-100" src="Public/Imagen/osletcare2.jpg" alt="Second slide">
               <div class="carousel-caption d-none d-md-block">
-              <h5>Ortodoncia</h5>
-              <p>Brackets</p>
+              <h5>Piel enrojezida</h5>
+              <p>Piel seca</p>
               </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="Public/Imagen/bienvenido3.jpg" alt="Third slide">
+            <img class="d-block w-100" src="Public/Imagen/osletcare3.jpg" alt="Third slide">
               <div class="carousel-caption d-none d-md-block">
-              <h5>Peridoncia</h5>
+              <h5>Trtamiento de acne</h5>
               <p>Limpeza</p>
               </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="Public/Imagen/bienvenido4.jpg" alt="Third slide">
+            <img class="d-block w-100" src="Public/Imagen/osletcare1.jpg" alt="Third slide">
               <div class="carousel-caption d-none d-md-block">
-              <h5>Diagnostico general</h5>
+              <h5>Limpieza facial</h5>
               <p>Consulta</p>
               </div>
         </div>

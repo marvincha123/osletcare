@@ -11,7 +11,6 @@ $id=$_POST['id'];
 
 $pdf=new PDF('L');
 $cabecera=$capaDatoTratamiento->getTratamientoById($id);
-$capaNegocioFactura->insertar($cabecera[0]['nit'],$id);
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',15);
 $pdf->Cell(120,-8,'Paciente: '.$cabecera[0]['apellido'].' '.$cabecera[0]['nombre'].'.',0,1,'L');

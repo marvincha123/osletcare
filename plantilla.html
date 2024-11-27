@@ -15,7 +15,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style="background-color: #38629F">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="http://localhost/centraldent/Public/Imagen/osletcare_h.png" alt="Logo" width="180" height="50" class="d-inline-block align-text-top">
+          <img src="https://osletcare-production.up.railway.app/Public/Imagen/osletcare_h.png" alt="Logo" width="180" height="50" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,13 +39,14 @@
                 if (isset($_SESSION['tipo'])){
              if ($_SESSION['tipo']=="A"){
             ?>
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/usuario.php">Usuario</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/usuario.php">Usuario</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/medicamento.php">Medicamento</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/factura.php">Factura</a>
              <?php 
             
             }} 
             ?>   
                
-            <a class="dropdown-item" href="/centraldent/CapaPresentacion/medicamento.php">Medicamento</a>
               </div>
             </li>
 
@@ -63,9 +64,9 @@
                 Seguimiento
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/visita.php">Visita</a>
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/agenda.php">Agenda</a>
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/receta.php">Receta</a> 
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/visita.php">Visita</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/agenda.php">Agenda</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/receta.php">Receta</a> 
               </div>
             </li>
            
@@ -74,9 +75,9 @@
                 Tratamiento
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/categoria.php">Categoria</a>
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/trabajo.php">Trabajo</a>
-                <a class="dropdown-item" href="/centraldent/CapaPresentacion/tratamiento.php">Tratamiento</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/categoria.php">Categoria</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/trabajo.php">Trabajo</a>
+                <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/tratamiento.php">Tratamiento</a>
               </div>
             </li>
             <?php 
@@ -95,8 +96,8 @@
                   Diagnostico virtual
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/centraldent/Principal.php">Iniciar</a>
-                  <a class="dropdown-item" href="/centraldent/CapaPresentacion/plan.php">Plan</a>
+                  <a class="dropdown-item" href="https://osletcare-production.up.railway.app/Principal.php">Iniciar</a>
+                  <a class="dropdown-item" href="https://osletcare-production.up.railway.app/CapaPresentacion/plan.php">Plan</a>
                 </div>
             </li>
             <?php
@@ -108,8 +109,8 @@
                   Cuenta
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/centraldent/login.php">Iniciar Sesion</a>
-                  <a class="dropdown-item" href="/centraldent/logout.php">Salir</a>
+                  <a class="dropdown-item" href="https://osletcare-production.up.railway.app/login.php">Iniciar Sesion</a>
+                  <a class="dropdown-item" href="https://osletcare-production.up.railway.app/logout.php">Salir</a>
                 </div>
             </li>
             
