@@ -173,7 +173,7 @@ include_once("../plantilla.html");
                     <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php print_r($resultado[$i]['id']) ?>">
                       Mostrar Detalle
                     </button>
-                    <form name="form1" id="form1" method="POST" action="../capaNegocio/receta/generarPdfReceta.php">
+                    <form name="form1" id="form1" method="POST" action="https://osletcare-production.up.railway.app/capaNegocio/receta/generarPdfReceta.php">
                     <input type="text" name="id" hidden value="<?php print_r($resultado[$i]['id']) ?>">
                      <button type="submit" class="btn btn-info">Imprimir Receta</button>
                     </form>
