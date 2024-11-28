@@ -271,10 +271,9 @@ include_once("plantilla.html");
         </div>
  
 
-
         <button class="btn btn-lg btn-primary btn-block" type="submit">Inicar Sesion</button>
         <!-- <button class="btn btn-lg btn-second btn-block" type="button" onclick="openCamera();">Inicia sesion con tu rostro</button> -->
-        <a href="/centraldent/registrar.php" class="btn btn-lg btn-second btn-block mt-3 mb-3" role="button" aria-pressed="true">Registrarse</a>  
+        <a href="https://osletcare-production.up.railway.app/registrar.php" class="btn btn-lg btn-second btn-block mt-3 mb-3" role="button" aria-pressed="true">Registrarse</a>  
       </form>
     </div>
   </div>
