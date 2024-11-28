@@ -11,7 +11,7 @@ include('Kairos.php');
 
 
 		public function insertar($nombre, $apellido,$cedula,$correo,$nit,$sexo,$telefono,$fotoBase64){
-		file_put_contents("../Public/Imagen/".$nombre.' '.$apellido.'.jpg', base64_decode($fotoBase64));
+		//file_put_contents("../Public/Imagen/".$nombre.' '.$apellido.'.jpg', base64_decode($fotoBase64));
 		$destinofoto= "../Public/Imagen/".$nombre.' '.$apellido.'.jpg';
 		$password_encriptado=base64_encode($cedula);
 		$kairos = new Kairos();
@@ -29,7 +29,7 @@ include('Kairos.php');
 		}
 
 		public function insertarCliente($nombre, $apellido,$cedula,$correo,$nit,$sexo,$telefono,$fotoBase64){
-		file_put_contents("Public/Imagen/".$nombre.' '.$apellido.'.jpg', base64_decode($fotoBase64));
+		//file_put_contents("Public/Imagen/".$nombre.' '.$apellido.'.jpg', base64_decode($fotoBase64));
 		$destinofoto= "../Public/Imagen/".$nombre.' '.$apellido.'.jpg';
 		$password_encriptado=base64_encode($cedula);
 		
