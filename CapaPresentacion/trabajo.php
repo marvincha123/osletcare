@@ -44,7 +44,8 @@ try{
 include_once("../plantilla.html");
 ?>
 <body>
-<h1 class="h2 text-center pt-5 mt-4">TRABAJOS</h1>
+<br>
+<h1 class="h2 text-center pt-5 mt-4">REGISTRAR TRABAJOS</h1>
 <div class="container mt-3">
     <form action="trabajo.php" method="POST" enctype="multipart/form-data">
         <input id="id" name="id" type="hidden">

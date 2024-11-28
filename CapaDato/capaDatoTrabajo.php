@@ -11,7 +11,7 @@ include_once("conexion.php");
 
 		public function insertar($nombre, $precio,$nombreFoto,$rutaFoto,$idcategoria){
 		$destino="../Public/Imagen/".$nombreFoto;
-		copy($rutaFoto, $destino);
+		//opy($rutaFoto, $destino);
 		$imagen=$destino;
 		$this->objetoConexion->conectar();
 		$this->objetoConexion->ejecutar(
