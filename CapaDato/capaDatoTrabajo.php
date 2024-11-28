@@ -32,7 +32,7 @@ include_once("conexion.php");
 			$this->objetoConexion->conectar();
 			if (!empty($nombreFoto) && !empty($rutaFoto)) {
 			$destino="../Public/Imagen/".$nombreFoto;
-			copy($rutaFoto, $destino);
+			//copy($rutaFoto, $destino);
 			$imagen=$destino;
 			$this->objetoConexion->ejecutar(
 				"update trabajo set nombre='$nombre',precio='$precio',idcategoria='$idcategoria',imagen='$imagen' where id='$id'");

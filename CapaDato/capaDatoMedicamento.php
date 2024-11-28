@@ -11,7 +11,7 @@ include_once("conexion.php");
 		public function insertar($nombre, $marca,$medida,$tipo,$nombreFoto,$rutaFoto){
 
 			$destino="../Public/Imagen/".$nombreFoto;
-			copy($rutaFoto, $destino);
+			//copy($rutaFoto, $destino);
 			$imagen=$destino;
 			$this->objetoConexion->conectar();
 			$this->objetoConexion->ejecutar(
@@ -31,7 +31,7 @@ include_once("conexion.php");
 			$this->objetoConexion->conectar();
 			if (!empty($nombreFoto) && !empty($rutaFoto)) {
 			$destino="../Public/Imagen/".$nombreFoto;
-			copy($rutaFoto, $destino);
+			//copy($rutaFoto, $destino);
 			$imagen=$destino;
 			$this->objetoConexion->ejecutar(
 				"update medicamento set nombre='$nombre',marca='$marca',medida='$medida',tipo='$tipo',imagen='$imagen' where id='$id'");
